@@ -10,19 +10,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
+ 
+  
+  @IBOutlet weak var previewImageOne: SpringImageView!
+  @IBOutlet weak var previewImageTwo: SpringImageView!
+  @IBOutlet weak var previewImageThree: SpringImageView!
+  @IBOutlet weak var previewImageFour: SpringImageView!
+  
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var descriptionLabel: UILabel!
   @IBOutlet weak var priceLabel: UILabel!
   @IBOutlet weak var imageBigView: SpringImageView!
+  var pastPosition = -1;
   var position = 0;
   var maxPosition = 0;
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     
-    let tap = UITapGestureRecognizer(target: self, action: "tapHandler:")
-    imageBigView.addGestureRecognizer(tap);
     
+    addTapGesture(previewImageOne)
+    addTapGesture(previewImageTwo)
+    addTapGesture(previewImageThree)
+    addTapGesture(previewImageFour)
+    addTapGesture(imageBigView)
+   
     let rightSwipe = UISwipeGestureRecognizer(target: self, action: "swipeHandler:");
     imageBigView.addGestureRecognizer(rightSwipe)
     let leftSwipe = UISwipeGestureRecognizer(target: self, action: "swipeHandler:");
@@ -33,10 +45,16 @@ class ViewController: UIViewController {
   }
 
   func tapHandler(sender:UITapGestureRecognizer){
-    print("Tap");
+    
+    if(sender.view?.tag >= 1 && sender.view?.tag <= 4){
+      
+      position = (sender.view?.tag)! - 1
+      changeBigLayout();
+    }
   }
   
   func swipeHandler(sender:UISwipeGestureRecognizer){
+   
     switch sender.direction {
      case UISwipeGestureRecognizerDirection.Left:
         position--
@@ -68,11 +86,33 @@ class ViewController: UIViewController {
    changeBigLayout()
   }
   
+  func addTapGesture(myObjectView:AnyObject)
+  {
+    let tap = UITapGestureRecognizer(target: self, action: "tapHandler:")
+    myObjectView.addGestureRecognizer(tap);
+  }
+  
   func changeBigLayout(){
     imageBigView.image = UIImage(named: foodsData[position].photo!)
     titleLabel.text = foodsData[position].name
     descriptionLabel.text = foodsData[position].description
     priceLabel.text = foodsData[position].price
+    if(pastPosition != position){
+      //let pastImagePreview = self.view.viewWithTag(pastPosition+1) as? SpringImageView;
+      let imagePreview = self.view.viewWithTag(position+1) as? SpringImageView;
+      /*pastImagePreview?.animation = "flipY"
+      pastImagePreview?.curve = "spring"
+      pastImagePreview?.duration = 0.5
+      pastImagePreview?.transform = CGAffineTransformMakeScale(1,1)
+      pastImagePreview?.animate()*/
+      imagePreview?.animation = "pop"
+      imagePreview?.curve = "spring"
+      imagePreview?.duration = 1
+      //pastImagePreview?.transform = CGAffineTransformMakeScale(1.3,1.3)
+      imagePreview?.animate()
+      pastPosition = position
+      
+    }
   }
   
   

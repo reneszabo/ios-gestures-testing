@@ -10,28 +10,28 @@ let foodsData = [
    Food(
       name: "Cowboy Stake with Cheese",
       price: "$ 26.50",
-      description: "Test description",
+      description: "Super cheese stake delux",
       photo: "food001",
       photoLow: "food001-lo"
     ),
   Food(
-    name: "Cowboy Stake with Cheese",
+    name: "Powerful Bacon Burger",
     price: "$ 15.50",
-    description: "Test description",
+    description: "Its the best of the country",
     photo: "food002",
     photoLow: "food002-lo"
   ),
   Food(
-    name: "Cowboy Stake with Cheese",
-    price: "$ 15.50",
-    description: "Test description",
+    name: "VeggiLover Sandwitch",
+    price: "$ 11.10",
+    description: "The best meal for VeggiLovers",
     photo: "food003",
     photoLow: "food003-lo"
   ),
   Food(
-    name: "Cowboy Stake with Cheese",
-    price: "$ 15.50",
-    description: "Test description",
+    name: "Stake Deal Breaker",
+    price: "$ 16.50",
+    description: "Nothing like it",
     photo: "food004",
     photoLow: "food004-lo"
   ),

@@ -49,7 +49,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="teG-dZ-ob2">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="teG-dZ-ob2">
                                         <rect key="frame" x="257" y="26" width="87" height="21"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mT3-FM-C8o">
@@ -58,7 +58,7 @@
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZq-NT-A56">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZq-NT-A56">
                                                 <rect key="frame" x="42" y="0.0" width="45" height="21"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.81932824240000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -67,10 +67,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JaC-it-aXJ">
-                                        <rect key="frame" x="0.0" y="47" width="600" height="489"/>
+                                        <rect key="frame" x="0.0" y="47" width="600" height="439"/>
                                         <subviews>
-                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food001" translatesAutoresizingMaskIntoConstraints="NO" id="yMo-DF-fqs" customClass="SpringImageView" customModule="com_ramirez_portfolio_gestures" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="600" height="489"/>
+                                            <imageView tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food001" translatesAutoresizingMaskIntoConstraints="NO" id="yMo-DF-fqs" customClass="SpringImageView" customModule="com_ramirez_portfolio_gestures" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="439"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -78,6 +78,35 @@
                                             <constraint firstItem="yMo-DF-fqs" firstAttribute="leading" secondItem="JaC-it-aXJ" secondAttribute="leading" id="Ym2-wO-GKg"/>
                                             <constraint firstItem="yMo-DF-fqs" firstAttribute="top" secondItem="JaC-it-aXJ" secondAttribute="top" id="yK2-kM-AEl"/>
                                         </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Z0b-tD-uh5">
+                                        <rect key="frame" x="0.0" y="486" width="600" height="50"/>
+                                        <subviews>
+                                            <imageView tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food001-lo" translatesAutoresizingMaskIntoConstraints="NO" id="eP6-bd-bsH" userLabel="previewImageOne" customClass="SpringImageView" customModule="com_ramirez_portfolio_gestures" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="146" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="SO9-mB-8Ad"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food002-lo" translatesAutoresizingMaskIntoConstraints="NO" id="3FZ-G9-f9E" userLabel="previewImageTwo" customClass="SpringImageView" customModule="com_ramirez_portfolio_gestures" customModuleProvider="target">
+                                                <rect key="frame" x="152" y="0.0" width="145" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="834-oF-Tyl"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food003-lo" translatesAutoresizingMaskIntoConstraints="NO" id="FhC-LN-DRm" userLabel="previewImageThree" customClass="SpringImageView" customModule="com_ramirez_portfolio_gestures" customModuleProvider="target">
+                                                <rect key="frame" x="303" y="0.0" width="146" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="sjD-jF-JVR"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food004-lo" translatesAutoresizingMaskIntoConstraints="NO" id="2BD-bV-KOs" userLabel="previewImageFour" customClass="SpringImageView" customModule="com_ramirez_portfolio_gestures" customModuleProvider="target">
+                                                <rect key="frame" x="455" y="0.0" width="145" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="hAl-bh-YaJ"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -94,6 +123,10 @@
                     <connections>
                         <outlet property="descriptionLabel" destination="mT3-FM-C8o" id="bWo-vm-2OI"/>
                         <outlet property="imageBigView" destination="yMo-DF-fqs" id="M5s-LH-Pf8"/>
+                        <outlet property="previewImageFour" destination="2BD-bV-KOs" id="Mdy-Sc-vn5"/>
+                        <outlet property="previewImageOne" destination="eP6-bd-bsH" id="5hK-bB-t29"/>
+                        <outlet property="previewImageThree" destination="FhC-LN-DRm" id="Lrg-1H-vZ3"/>
+                        <outlet property="previewImageTwo" destination="3FZ-G9-f9E" id="5r2-hP-XJj"/>
                         <outlet property="priceLabel" destination="cZq-NT-A56" id="fgl-Ln-unY"/>
                         <outlet property="titleLabel" destination="3mv-eA-9me" id="U7r-WN-dMM"/>
                     </connections>
@@ -105,5 +138,9 @@
     </scenes>
     <resources>
         <image name="food001" width="1900" height="975"/>
+        <image name="food001-lo" width="800" height="411"/>
+        <image name="food002-lo" width="800" height="411"/>
+        <image name="food003-lo" width="800" height="411"/>
+        <image name="food004-lo" width="800" height="411"/>
     </resources>
 </document>
